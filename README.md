@@ -1,2 +1,3 @@
-# adventOfCode2018
-Getting started with Python by Advent of Code
+# Advent of Code 2018
+
+Getting started with Python by solving Advent of Code
