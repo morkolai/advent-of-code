@@ -1,10 +1,10 @@
 #Advent of Code - Day 2
 
-#Part 1
-
 infile = open("day2input.txt","r")
 li = infile.read()
 li = li.split("\n")
+
+#Part 1:
 
 twice = 0
 trice = 0
@@ -34,3 +34,31 @@ for i in range(len(li)):
 
 
 print ("Part 1: ", twice * trice) #checksum = 5658
+
+#Part 2:
+
+def idpair(idone, idtwo):
+
+    letter = -1
+
+    for x in range(len(idone)):
+
+        if idone[x] != idtwo[x]:
+            if letter == -1:
+                letter = x
+            else:
+                return -1
+    return letter
+
+diff = 0
+
+for i in range(len(li)):
+    for j in range(i+1, len(li)):
+        if idpair(li[i],li[j]) != -1:
+            idcode = li[i]
+            diff = idpair(li[i],li[j])
+            break
+    if diff:
+        break
+
+print("Part 2: ", idcode[0:diff],idcode[diff+1:len(idcode)]) #n mgyjkpruszlbaqwficavxneo
