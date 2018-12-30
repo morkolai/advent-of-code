@@ -9,28 +9,28 @@ li = li.split("\n")
 twice = 0
 trice = 0
 
-def check(idk):
+def check(boxid):
     
-    di = 0
-    tri = 0
+    di = False
+    tri = False
     chars = list()
     
-    for x in range(len(idk)):
-        if idk[x] not in chars:
-            tmp = idk.count(idk[x])
-            chars.append(idk[x])
-            if tmp is 2:
-                di += 1
-            elif tmp is 3:
-                tri += 1
-            tmp = 0
-    
+    for x in range(len(boxid)):
+        if boxid[x] not in chars:
+            num = boxid.count(boxid[x])
+            chars.append(boxid[x])
+            if num == 2 and di == False:
+                di = True
+            elif num == 3 and tri == False:
+                tri = True
+
     card = [di, tri]
     return card
 
 for i in range(len(li)):
     res = check(li[i])
-    twice += res[0]
-    trice += res[1]
+    twice += int(res[0])
+    trice += int(res[1])
 
-print ("Part 1: ", twice * trice) #checksum
+
+print ("Part 1: ", twice * trice) #checksum = 5658
