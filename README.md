@@ -3,5 +3,5 @@
 Getting started with Python by solving Advent of Code
 
 ## Overview 
-- [x] Day 1 (ca.2 min, truly bad)
-- [ ] Day 2
+- [x] Day 1 (part 2 very slow)
+- [x] Day 2
