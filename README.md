@@ -3,6 +3,6 @@
 Getting started with Python by solving Advent of Code
 
 ## Overview 
-- [x] Day 1 (part 2 very slow)
+- [x] Day 1
 - [x] Day 2
 - [ ] Day 3

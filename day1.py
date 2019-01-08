@@ -1,29 +1,31 @@
 #Advent of Code - Day 1
-#Part 1
 
 infile = open("day1input.txt", "r")
 inputlist = infile.read()
 inputlist = inputlist.split("\n") #converts string to list
 
-sum = 0
-for x in inputlist:        
-    sum += int(x)
+#Part 1
 
-print("Part 1: ", sum) #525
+current_sum = 0
+for x in inputlist:        
+    current_sum += int(x)
+
+print("Part 1: ", current_sum) #525
 
 #Part 2
 
-sum = 0
+current_sum = 0
 flag = True
-used = list()   #list of all used frequencys
-used.append(sum)
+used = set()   #list of all used frequencys
+used.add(current_sum)
 
 while(flag):
-   for x in inputlist:
-       sum += int(x)
-       if sum in used:
-           flag = False
-           break
-       used.append(sum)
+    for x in inputlist:
+        current_sum += int(x)
+        if current_sum in used:
+            flag = False
+            break
+        else:
+            used.add(current_sum)
 
-print("Part 2: ", sum) #75749
+print("Part 2: ", current_sum) #75749
