@@ -1,8 +1,3 @@
-# Advent of Code 2018
+Advent of Code
 
-Getting started with Python by solving Advent of Code
-
-## Overview 
-- [x] Day 1
-- [x] Day 2
-- [ ] Day 3
+https://adventofcode.com/
